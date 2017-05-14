@@ -27,6 +27,9 @@ public class AutocompleteProvider {
 	private ArrayList<Candidate> candidateSearch(Candidate curr) {
 		Collection<Candidate> links = curr.getLinks();
 		ArrayList<Candidate> candidates = new ArrayList<Candidate>();
+		if (curr.isCandidate()) {
+			candidates.add(curr);
+		}
 		for(Candidate c: links) {
 			if (c.isCandidate()) {
 				candidates.add(c);
