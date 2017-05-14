@@ -6,8 +6,8 @@ public class Candidate {
 	// The word the candidate is mapped on and represents
 	private String word;
 	
-	// The number of times the word has been typed in. Only used for candidates
-	private Integer confidence;
+	// The number of times the word has been typed in. Only used for candidates but defined at the start in case a non-candidate becomes a candidate
+	private Integer confidence = 0;
 	
 	// The nodes this node links to
 	// Hashed on the next possible fragment based on the current fragment since they won't repeat
@@ -34,7 +34,7 @@ public class Candidate {
 		this.word = word;
 		this.isCandidate = isCandidate;
 		if (isCandidate) {
-			confidence = 1;
+			confidence++;
 		}
 	}
 	
