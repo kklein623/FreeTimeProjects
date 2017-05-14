@@ -19,7 +19,9 @@ public class Main {
 			} else if (inputString.toLowerCase().equals("input")) {
 				System.out.print("Input: ");
 				inputString = scanIn.nextLine();
-				autoComplete.getWords(inputString);	
+				if (autoComplete.getWords(inputString) == null) {
+					System.out.println(inputString + " not found in typeahead database. More training needed.");
+				};	
 				
 			} else if (inputString.toLowerCase().equals("exit")) {
 				System.out.println("Exiting");
