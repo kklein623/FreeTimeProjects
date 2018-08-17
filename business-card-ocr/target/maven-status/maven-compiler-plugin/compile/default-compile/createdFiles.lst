@@ -1,5 +1,0 @@
-parsers\EmailAddressParser.class
-parsers\NameParser.class
-BusinessCardParser.class
-parsers\PhoneNumberParser.class
-ContactInfo.class
